@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ExCSS
 {
-    internal sealed class PageRule : Rule, IPageRule
+    public sealed class PageRule : Rule, IPageRule
     {
         internal PageRule(StylesheetParser parser)
             : base(RuleType.Page, parser)

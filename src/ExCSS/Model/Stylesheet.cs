@@ -14,14 +14,15 @@ namespace ExCSS
             Rules = new RuleList(this);
         }
 
-        internal RuleList Rules { get; }
+        public RuleList Rules { get; }
 
-        public IEnumerable<IRule> CharacterSetRules => Rules.Where(r => r is CharsetRule);
-        public IEnumerable<IRule> FontfaceSetRules => Rules.Where(r => r is FontFaceRule);
-        public IEnumerable<IRule> MediaRules => Rules.Where(r => r is MediaRule);
-        public IEnumerable<IRule> ImportRules => Rules.Where(r => r is ImportRule);
-        public IEnumerable<IRule> NamespaceRules => Rules.Where(r => r is NamespaceRule);
-        public IEnumerable<IRule> PageRules => Rules.Where(r => r is PageRule);
+        public IEnumerable<CharsetRule> CharacterSetRules => Rules.Where(r => r is CharsetRule).Cast<CharsetRule>();
+        public IEnumerable<FontFaceRule> FontfaceSetRules => Rules.Where(r => r is FontFaceRule).Cast<FontFaceRule>();
+        public IEnumerable<MediaRule> MediaRules => Rules.Where(r => r is MediaRule).Cast<MediaRule>();
+        public IEnumerable<ImportRule> ImportRules => Rules.Where(r => r is ImportRule).Cast<ImportRule>();
+        public IEnumerable<NamespaceRule> NamespaceRules => Rules.Where(r => r is NamespaceRule).Cast<NamespaceRule>();
+        public IEnumerable<PageRule> PageRules => Rules.Where(r => r is PageRule).Cast<PageRule>();
+        public IEnumerable<StyleRule> StyleRules => Rules.Where(r => r is StyleRule).Cast<StyleRule>();
 
         public IRule Add(RuleType ruleType)
         {

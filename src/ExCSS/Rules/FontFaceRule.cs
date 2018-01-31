@@ -1,7 +1,7 @@
 ﻿
 namespace ExCSS
 {
-    internal sealed class FontFaceRule : DeclarationRule, IFontFaceRule
+    public sealed class FontFaceRule : DeclarationRule, IFontFaceRule
     {
         internal FontFaceRule(StylesheetParser parser)
             : base(RuleType.FontFace, RuleNames.FontFace, parser)

@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ExCSS
 {
-    internal sealed class ImportRule : Rule
+    public sealed class ImportRule : Rule
     {
         private Stylesheet _stylesheet;
 

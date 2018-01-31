@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ExCSS
 {
-    internal sealed class NamespaceRule : Rule, INamespaceRule
+    public sealed class NamespaceRule : Rule, INamespaceRule
     {
         private string _namespaceUri;
         private string _prefix;

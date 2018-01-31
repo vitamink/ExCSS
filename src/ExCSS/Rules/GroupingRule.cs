@@ -1,7 +1,7 @@
 ﻿
 namespace ExCSS
 {
-    internal abstract class GroupingRule : Rule, IGroupingRule
+    public abstract class GroupingRule : Rule, IGroupingRule
     {
         internal GroupingRule(RuleType type, StylesheetParser parser)
             : base(type, parser)

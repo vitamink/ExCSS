@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ExCSS
 {
-    internal abstract class DeclarationRule : Rule, IProperties
+    public abstract class DeclarationRule : Rule, IProperties
     {
         private readonly string _name;
 

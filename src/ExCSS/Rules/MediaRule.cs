@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ExCSS
 {
-    internal sealed class MediaRule : ConditionRule, IMediaRule
+    public sealed class MediaRule : ConditionRule, IMediaRule
     {
         internal MediaRule(StylesheetParser parser) : base(RuleType.Media, parser)
         {

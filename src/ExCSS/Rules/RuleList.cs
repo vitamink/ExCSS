@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ExCSS
 {
-    internal sealed class RuleList : IRuleList
+    public sealed class RuleList : IRuleList
     {
         private readonly StylesheetNode _parent;
 
